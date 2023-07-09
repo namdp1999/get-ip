@@ -5,7 +5,7 @@ document.querySelector("#form").addEventListener("submit", function(e) {
 fetch("https://api.ipify.org?format=json")
   .then((res) => res.json())
   .then((data) => {
-    fetch(`http://ip-api.com/json/${data.ip}`)
+    fetch(`https://ip-api.com/json/${data.ip}`)
       .then((resArea) => resArea.json())
       .then((dataArea) => {
         const dataFinal = {
